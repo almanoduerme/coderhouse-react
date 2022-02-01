@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: #a18a5d;
 }
 
 .header .header-logo {
@@ -38,16 +38,16 @@
 }
 
 .header .link:hover {
-  color: rgba(0, 0, 0, 0.534);
+  color: #efce8b;
 }
 
 .bars {
   display: none;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1400px) {
   .header .navbar {
-    width: 46%;
+    width: 56%;
   }
 
   .header span {
@@ -56,26 +56,14 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .header .navbar {
-      width: 68%;
-    }
-  
-    .header span {
-      font-size: 1.2rem;
-    }
+  .header .navbar {
+    width: 83%;
   }
 
-/* @media screen and (max-width: 1024px) {
-  .header .navbar {
-    width: 60%;
-  }
-  .header .link {
-    font-size: 1.2rem;
-  }
   .header span {
     font-size: 1.2rem;
   }
-} */
+}
 
 @media screen and (max-width: 992px) {
   .navbar {

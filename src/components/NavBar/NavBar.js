@@ -1,6 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 import { GoThreeBars } from "react-icons/go";
+import Button from "../Button/Button";
 
 const NavBar = () => {
   return (
@@ -31,6 +32,9 @@ const NavBar = () => {
             <a className="link" href="/">
               Contact
             </a>
+          </li>
+          <li>
+            <Button btn='Sing up!' />
           </li>
         </ul>
       </nav>
