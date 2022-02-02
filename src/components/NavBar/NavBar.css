@@ -25,7 +25,7 @@
   width: 40%;
 }
 
-.header .navbar-nav {
+.header .nav-links {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -45,9 +45,17 @@
   display: none;
 }
 
-@media screen and (max-width: 1400px) {
+.icon {
+  font-size: 1.4rem;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1460px) {
   .header .navbar {
-    width: 56%;
+    width: 62%;
   }
 
   .header span {
@@ -57,10 +65,13 @@
 
 @media screen and (max-width: 1200px) {
   .header .navbar {
-    width: 83%;
+    width: 100%;
   }
 
   .header span {
+    font-size: 1.2rem;
+  }
+  .header .link {
     font-size: 1.2rem;
   }
 }

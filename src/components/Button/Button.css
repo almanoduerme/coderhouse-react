@@ -6,5 +6,6 @@
 }
 
 .btn:hover {
-    background-color: #EFCE8B;
+  background-color: #efce8b;
+  cursor: pointer;
 }

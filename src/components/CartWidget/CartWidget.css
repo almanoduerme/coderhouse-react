@@ -1,0 +1,7 @@
+svg {
+  font-size: 1.6rem;
+}
+
+svg:hover {
+  cursor: pointer;
+}

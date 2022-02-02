@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavBar.css";
+import CartWidget from "../CartWidget/CartWidget";
 import { GoThreeBars } from "react-icons/go";
 import Button from "../Button/Button";
 
@@ -12,7 +13,7 @@ const NavBar = () => {
       </div>
       <GoThreeBars className="bars" />
       <nav className="navbar">
-        <ul className="navbar-nav">
+        <ul className="nav-links">
           <li>
             <a className="link" href="/">
               Home
@@ -34,8 +35,9 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <Button btn='Sing up!' />
+            <Button className="btn" btn="Sing Up!" />
           </li>
+          <CartWidget />
         </ul>
       </nav>
     </header>
