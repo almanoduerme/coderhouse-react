@@ -35,7 +35,7 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <Button className="btn" btn="Sing Up!" />
+            <Button backgroundColor={'white'} colorText='black'  name="Sing Up!" />
           </li>
           <CartWidget />
         </ul>
