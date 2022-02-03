@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
-import './ItemCount.css';
+import "./ItemCount.css";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -24,7 +24,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <Button name="Increment" handleClick={increment} />
         <Button name="Decrement" handleClick={decrement} />
       </div>
-      <Button widthButton='100%' name="Add to cart" handleClick={onAdd()} />
+      <Button widthButton="100%" name="Add to cart" handleClick={onAdd()} />
     </div>
   );
 };
