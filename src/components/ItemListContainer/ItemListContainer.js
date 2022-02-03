@@ -4,7 +4,7 @@ import "./ItemListContainer.css";
 
 const ItemListContainer = ({ greeting }) => {
   const onAdd = () => {
-    console.log("Product added");
+    alert("Product added");
   };
 
   return (
