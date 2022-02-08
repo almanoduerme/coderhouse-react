@@ -4,7 +4,11 @@ import "./ItemListContainer.css";
 
 const ItemListContainer = ({ greeting }) => {
   const onAdd = (count) => {
-    console.log(`items added to cart ${count}`);
+    if (count > 0) {
+      console.log(`Items added to cart ${count}!`);
+    } else {
+      console.log("No items added to cart!");
+    }
   };
 
   return (
