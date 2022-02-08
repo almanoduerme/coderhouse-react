@@ -3,15 +3,15 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemListContainer.css";
 
 const ItemListContainer = ({ greeting }) => {
-  const onAdd = () => {
-    alert("Product added");
+  const onAdd = (count) => {
+    console.log(`items added to cart ${count}`);
   };
 
   return (
     <>
       <div className="itemListContainer">
         <h1>{greeting}</h1>
-        <ItemCount stock={5} initial={0} onAdd={() => onAdd} />
+        <ItemCount stock={5} initial={0} onAdd={onAdd} />
       </div>
     </>
   );
