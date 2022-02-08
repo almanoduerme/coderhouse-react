@@ -1,0 +1,7 @@
+.card {
+  border: 1px solid #ccc;
+}
+
+.card .card-content {
+  padding: 0 0 0.8rem 0;
+}
