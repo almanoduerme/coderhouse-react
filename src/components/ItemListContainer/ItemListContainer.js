@@ -121,14 +121,12 @@ const ItemListContainer = ({ greeting }) => {
   }, []);
 
   return (
-    <>
-      <div className="itemListContainer">
-        <h1>{greeting}</h1>
-        <ItemCount stock={5} initial={0} onAdd={onAdd} />
-        <ItemList products={products} />
-        {loading && <p>Loading products...</p>}
-      </div>
-    </>
+    <div className="itemListContainer">
+      <h1>{greeting}</h1>
+      <ItemCount stock={5} initial={0} onAdd={onAdd} />
+      <ItemList products={products} />
+      {loading && <p>Loading products...</p>}
+    </div>
   );
 };
 

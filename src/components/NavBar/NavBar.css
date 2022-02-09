@@ -53,6 +53,12 @@
   cursor: pointer;
 }
 
+@media screen and (min-width: 992px) {
+  .aside {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 1460px) {
   .header .navbar {
     width: 62%;
