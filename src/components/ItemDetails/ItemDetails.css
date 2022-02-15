@@ -1,0 +1,9 @@
+.itemDetails {
+  width: 16%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.itemDetails img {
+  max-width: 100%;
+}
