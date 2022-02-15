@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { GoThreeBars, GoX } from "react-icons/go";
-import Button from "../Button/Button";
 import NavBarMobile from "./NavBarMobile";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,13 +12,23 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Menu de Links
+  const menuLinks = [
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
     <>
       <header className="header">
-        <div className="header-logo">
-          <img className="logo" src="./img/logo2.png" alt="logo" />
-          <span> TRUSTINESS STORE</span>
-        </div>
+        <NavLink to="/">
+          <div className="header-logo">
+            <img className="logo" src="./img/logo2.png" alt="logo" />
+            <span> TRUSTINESS STORE</span>
+          </div>
+        </NavLink>
 
         {isOpen ? (
           <GoX className="bars" onClick={toggleMenu} />
@@ -28,34 +38,19 @@ const NavBar = () => {
 
         <nav className="navbar">
           <ul className="nav-links">
+            {menuLinks.map((link) => (
+              <li key={link.name}>
+                <NavLink
+                  to={link.path}
+                  className="link"
+                >
+                  {link.name}
+                </NavLink>
+              </li>
+            ))}
             <li>
-              <a className="link" href="/">
-                Home
-              </a>
+              <CartWidget />
             </li>
-            <li>
-              <a className="link" href="/">
-                Products
-              </a>
-            </li>
-            <li>
-              <a className="link" href="/">
-                About us
-              </a>
-            </li>
-            <li>
-              <a className="link" href="/">
-                Contact
-              </a>
-            </li>
-            <li>
-              <Button
-                backgroundColor={"white"}
-                colorText="black"
-                name="Sing Up!"
-              />
-            </li>
-            <CartWidget />
           </ul>
         </nav>
       </header>

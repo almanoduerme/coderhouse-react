@@ -1,3 +1,21 @@
 .itemListContainer {
-    text-align: center;
+  text-align: center;
+}
+
+.category {
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.category .nav-link {
+  width: 28%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

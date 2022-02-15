@@ -5,6 +5,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 1",
     price: 1.99,
+    destacado: "no",
+    categoria: 'zapatos'
   },
   {
     id: 2,
@@ -12,6 +14,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 2",
     price: 2.99,
+    destacado: "no",
+    categoria: 'zapatos'
   },
   {
     id: 3,
@@ -19,6 +23,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 3",
     price: 3.99,
+    destacado: "no",
+    categoria: 'zapatos'
   },
   {
     id: 4,
@@ -26,6 +32,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 4",
     price: 4.99,
+    destacado: "si",
+    categoria: 'remeras'
   },
   {
     id: 5,
@@ -33,6 +41,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 5",
     price: 5.99,
+    destacado: "si",
+    categoria: 'zapatos'
   },
   {
     id: 6,
@@ -40,6 +50,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 6",
     price: 6.99,
+    destacado: "no",
+    categoria: 'zapatos'
   },
   {
     id: 7,
@@ -47,6 +59,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 7",
     price: 7.99,
+    destacado: "si",
+    categoria: 'zapatos'
   },
   {
     id: 8,
@@ -54,6 +68,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 8",
     price: 8.99,
+    destacado: "no",
+    categoria: 'zapatos'
   },
   {
     id: 9,
@@ -61,6 +77,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 9",
     price: 9.99,
+    destacado: "si",
+    categoria: 'zapatos'
   },
   {
     id: 10,
@@ -68,6 +86,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 10",
     price: 10.99,
+    destacado: "si",
+    categoria: 'zapatos'
   },
   {
     id: 11,
@@ -75,6 +95,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 11",
     price: 11.99,
+    destacado: "no",
+    categoria: 'zapatos'
   },
   {
     id: 12,
@@ -82,6 +104,8 @@ const products = [
     img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 12",
     price: 12.99,
+    destacado: "si",
+    categoria: 'zapatos'
   },
 ];
 
