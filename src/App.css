@@ -9,3 +9,16 @@
   font-family: 'Poppins', sans-serif;
   color: black;
 }
+html, body, #root {
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  padding: 1rem;
+}

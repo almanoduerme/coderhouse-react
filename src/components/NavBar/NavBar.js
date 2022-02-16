@@ -40,16 +40,15 @@ const NavBar = () => {
           <ul className="nav-links">
             {menuLinks.map((link) => (
               <li key={link.name}>
-                <NavLink
-                  to={link.path}
-                  className="link"
-                >
+                <NavLink to={link.path} className="link">
                   {link.name}
                 </NavLink>
               </li>
             ))}
             <li>
-              <CartWidget />
+              <NavLink to="/cart" className="link">
+                <CartWidget />
+              </NavLink>
             </li>
           </ul>
         </nav>

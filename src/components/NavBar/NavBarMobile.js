@@ -1,36 +1,34 @@
 import React from "react";
-import Button from "../Button/Button";
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBarMobile.css";
+import { NavLink } from "react-router-dom";
 
 const NavBarMobile = () => {
+  // Menu de Links
+  const menuLinks = [
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
-    <ul className="aside">
-      <li>
-        <a className="link" href="/">
-          Home
-        </a>
-      </li>
-      <li>
-        <a className="link" href="/">
-          Products
-        </a>
-      </li>
-      <li>
-        <a className="link" href="/">
-          About us
-        </a>
-      </li>
-      <li>
-        <a className="link" href="/">
-          Contact
-        </a>
-      </li>
-      <li>
-        <Button backgroundColor={"white"} colorText="black" name="Sing Up!" />
-      </li>
-      <CartWidget />
-    </ul>
+    <nav className="aside">
+      <ul className="nav-links">
+        {menuLinks.map((link) => (
+          <li key={link.name}>
+            <NavLink to={link.path} className="link">
+              {link.name}
+            </NavLink>
+          </li>
+        ))}
+        <li>
+          <NavLink to="/cart" className="link">
+            <CartWidget />
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import "./ItemListContainer.css";
 import { getProducts } from "../Api";
 import ItemList from "../ItemList/ItemList";
 import { NavLink, useParams } from "react-router-dom";
+import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -36,10 +36,10 @@ const ItemListContainer = () => {
       {category && (
         <div className="category">
           <div className="nav-link">
-            <NavLink to="/products">TODOS LOS PRODUCTOS</NavLink>
-            <NavLink to="/products/destacado">PRODUCTOS DESTACADOS</NavLink>
-            <NavLink to="/products/categoria/remeras">REMERAS</NavLink>
-            <NavLink to="/products/categoria/vestidos">Vestidos</NavLink>
+            <NavLink className='navLink' to="/products">TODOS LOS PRODUCTOS</NavLink>
+            <NavLink className='navLink' to="/products/destacado">PRODUCTOS DESTACADOS</NavLink>
+            <NavLink className='navLink' to="/products/categoria/remeras">REMERAS</NavLink>
+            <NavLink className='navLink' to="/products/categoria/vestidos">VESTIDOS</NavLink>
           </div>
         </div>
       )}

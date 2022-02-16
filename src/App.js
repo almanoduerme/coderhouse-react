@@ -7,29 +7,32 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Pages
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
 import Error404 from "./pages/Error404";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <>
       <BrowserRouter>
         <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products/" element={<ItemListContainer />} />
-          <Route path="/products/:categoryId" element={<ItemListContainer />} />
-          <Route path="/products/:categoryId/:typeId" element={<ItemListContainer />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/item/:id" element={<ItemDetailContainer />} />
-
-          <Route path="*" element={<Error404 />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/products/" element={<ItemListContainer />} />
+            <Route path="/products/:categoryId" element={<ItemListContainer />} />
+            <Route path="/products/:categoryId/:typeId" element={<ItemListContainer />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
+        </main>
+        <Footer />
       </BrowserRouter>
-    </>
   );
 }
 
