@@ -11,8 +11,10 @@ export default function Item({ product }) {
       <div className="card-content">
         <p>{product.description}</p>
         <p>{product.price}</p>
-        {/* <Button name="Comprar" /> */}
-        <NavLink to={`/item/${product.id}`}><Button name="Comprar" /></NavLink>
+
+        <NavLink to={`/item/${product.id}`}>
+          <Button name="Ver más"></Button>
+        </NavLink>
       </div>
     </div>
   );
