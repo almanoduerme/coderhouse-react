@@ -28,12 +28,7 @@ const ItemCount = ({ stock, initial, productName }) => {
         <p className="counter">{count}</p>
         <Button widthButton="45%" name="+" handleClick={increment} />
       </div>
-      <Button
-        margin=".5rem 0 0 0"
-        widthButton="100%"
-        name="Add to cart"
-        handleClick={() => onAddToCart(count)}
-      />
+      <Button margin=".5rem 0 0 0" widthButton="100%" name="Add to cart" handleClick={() => onAddToCart(count)} />
     </div>
   );
 };

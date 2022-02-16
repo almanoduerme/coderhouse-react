@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./Item.css";
 
@@ -12,9 +12,9 @@ export default function Item({ product }) {
         <p>{product.description}</p>
         <p>{product.price}</p>
 
-        <NavLink to={`/item/${product.id}`}>
+        <Link to={`/item/${product.id}`}>
           <Button name="Ver más"></Button>
-        </NavLink>
+        </Link>
       </div>
     </div>
   );
