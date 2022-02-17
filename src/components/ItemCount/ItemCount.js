@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../Button/Button";
 import "./ItemCount.css";
 
-const ItemCount = ({ stock, initial, productName }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   const increment = () => {
@@ -17,10 +17,6 @@ const ItemCount = ({ stock, initial, productName }) => {
     }
   };
 
-  const onAddToCart = () => {
-    console.log(`Se agregaron ${count} "${productName.name}" al carrito!`);
-  };
-
   return (
     <div className="itemCount">
       <div className="itemCountButtons">
@@ -28,7 +24,7 @@ const ItemCount = ({ stock, initial, productName }) => {
         <p className="counter">{count}</p>
         <Button widthButton="45%" name="+" handleClick={increment} />
       </div>
-      <Button margin=".5rem 0 0 0" widthButton="100%" name="Add to cart" handleClick={() => onAddToCart(count)} />
+      <Button margin=".5rem 0 0 0" widthButton="100%" name="Add to cart" handleClick={() => onAdd(count)} />
     </div>
   );
 };

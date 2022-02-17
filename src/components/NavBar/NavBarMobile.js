@@ -1,7 +1,7 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import "./NavBarMobile.css";
 import { NavLink } from "react-router-dom";
+import "./NavBarMobile.css";
 
 const NavBarMobile = () => {
   // Menu de Links

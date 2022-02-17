@@ -23,3 +23,11 @@
 .navLink:hover {
   font-style: italic;
 }
+
+@media screen and (max-width: 768px) {
+  .category .nav-link {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

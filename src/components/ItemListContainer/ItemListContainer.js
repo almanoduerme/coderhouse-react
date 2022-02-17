@@ -36,10 +36,18 @@ const ItemListContainer = () => {
       {category && (
         <div className="category">
           <div className="nav-link">
-            <NavLink className='navLink' to="/products">TODOS LOS PRODUCTOS</NavLink>
-            <NavLink className='navLink' to="/products/destacado">PRODUCTOS DESTACADOS</NavLink>
-            <NavLink className='navLink' to="/products/categoria/remeras">REMERAS</NavLink>
-            <NavLink className='navLink' to="/products/categoria/vestidos">VESTIDOS</NavLink>
+            <NavLink className="navLink" to="/products">
+              All the Products
+            </NavLink>
+            <NavLink className="navLink" to="/products/destacado">
+              Featured Products
+            </NavLink>
+            <NavLink className="navLink" to="/products/categoria/remeras">
+              T-Shirts
+            </NavLink>
+            <NavLink className="navLink" to="/products/categoria/vestidos">
+              Dresses
+            </NavLink>
           </div>
         </div>
       )}
