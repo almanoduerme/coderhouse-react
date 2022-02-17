@@ -48,6 +48,9 @@ const ItemListContainer = () => {
             <NavLink className="navLink" to="/products/categoria/vestidos">
               Dresses
             </NavLink>
+            <NavLink className="navLink" to="/products/categoria/zapatos">
+              Shoes
+            </NavLink>
           </div>
         </div>
       )}

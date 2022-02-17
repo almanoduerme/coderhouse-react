@@ -24,10 +24,35 @@
   font-style: italic;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .category .nav-link {
-    width: 100%;
+    width: 68%;
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .category .nav-link {
+    width: 78%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category .nav-link {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .category .nav-link {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
 }

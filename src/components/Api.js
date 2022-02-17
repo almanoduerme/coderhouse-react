@@ -11,7 +11,7 @@ const products = [
   {
     id: 1,
     name: "Product 2",
-    img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    img: "https://images.pexels.com/photos/6744427/pexels-photo-6744427.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 2",
     price: 2.99,
     destacado: false,
@@ -38,7 +38,7 @@ const products = [
   {
     id: 4,
     name: "Product 5",
-    img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 5",
     price: 5.99,
     destacado: true,
@@ -47,7 +47,7 @@ const products = [
   {
     id: 5,
     name: "Product 6",
-    img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    img: "https://images.pexels.com/photos/4452517/pexels-photo-4452517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 6",
     price: 6.99,
     destacado: false,
@@ -65,7 +65,7 @@ const products = [
   {
     id: 7,
     name: "Product 8",
-    img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 8",
     price: 8.99,
     destacado: false,
@@ -74,7 +74,7 @@ const products = [
   {
     id: 8,
     name: "Product 9",
-    img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 9",
     price: 9.99,
     destacado: true,
@@ -83,7 +83,7 @@ const products = [
   {
     id: 9,
     name: "Product 10",
-    img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 10",
     price: 10.99,
     destacado: true,
@@ -92,7 +92,7 @@ const products = [
   {
     id: 10,
     name: "Product 11",
-    img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 11",
     price: 11.99,
     destacado: false,
@@ -101,7 +101,7 @@ const products = [
   {
     id: 11,
     name: "Product 12",
-    img: "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 12",
     price: 12.99,
     destacado: true,
