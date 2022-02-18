@@ -7,7 +7,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Pages
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
@@ -20,7 +20,7 @@ function App() {
       <NavBar />
       <main>
         <Routes>
-          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/" element={<Home />} />
           <Route path="/products/" element={<ItemListContainer />} />
           <Route path="/products/:categoryId" element={<ItemListContainer />} />
           <Route path="/products/:categoryId/:typeId" element={<ItemListContainer />} />
