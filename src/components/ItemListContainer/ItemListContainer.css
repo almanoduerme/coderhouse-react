@@ -4,20 +4,20 @@
 
 .category {
   width: 90%;
-  margin: 1rem auto;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
 .category .nav-link {
-  width: 48%;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  width: 40%;
+  background-color: pink;
+}
+
+.category .nav-link:hover {
+  font-weight: bold;
 }
 
 .navLink:hover {

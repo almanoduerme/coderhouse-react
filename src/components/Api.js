@@ -125,7 +125,7 @@ const products = [
     img: "https://images.pexels.com/photos/7622455/pexels-photo-7622455.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 16",
     price: 16.99,
-    category: "vestidos", 
+    category: "vestidos",
   },
 ];
 
@@ -133,20 +133,20 @@ const products = [
 
 const CATEGORIAS = [
   {
-    id: '',
-    description: "todos",
+    id: "",
+    description: "Todos",
   },
   {
     id: "remeras",
-    description: "remeras",
+    description: "Remeras",
   },
   {
     id: "vestidos",
-    description: "vestidos",
+    description: "Vestidos",
   },
   {
     id: "zapatos",
-    description: "zapatos",
+    description: "Zapatos",
   },
 ];
 
@@ -170,7 +170,6 @@ export const getProductsByCategory = (categoryId) => {
     const productsToResolve = products.filter(
       (item) => item.category === categoryId
     );
-
     resolve(productsToResolve);
   });
 };
