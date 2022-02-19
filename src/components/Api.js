@@ -5,8 +5,7 @@ const products = [
     img: "https://images.pexels.com/photos/7045174/pexels-photo-7045174.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 1",
     price: 1.99,
-    destacado: false,
-    categoria: "remeras",
+    category: "remeras",
   },
   {
     id: 1,
@@ -14,8 +13,7 @@ const products = [
     img: "https://images.pexels.com/photos/6744427/pexels-photo-6744427.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 2",
     price: 2.99,
-    destacado: false,
-    categoria: "zapatos",
+    category: "zapatos",
   },
   {
     id: 2,
@@ -23,8 +21,7 @@ const products = [
     img: "https://images.pexels.com/photos/3674322/pexels-photo-3674322.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 3",
     price: 3.99,
-    destacado: false,
-    categoria: "remeras",
+    category: "remeras",
   },
   {
     id: 3,
@@ -32,8 +29,7 @@ const products = [
     img: "https://images.pexels.com/photos/9902629/pexels-photo-9902629.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 4",
     price: 4.99,
-    destacado: true,
-    categoria: "remeras",
+    category: "remeras",
   },
   {
     id: 4,
@@ -41,8 +37,7 @@ const products = [
     img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 5",
     price: 5.99,
-    destacado: true,
-    categoria: "zapatos",
+    category: "zapatos",
   },
   {
     id: 5,
@@ -50,8 +45,7 @@ const products = [
     img: "https://images.pexels.com/photos/4452517/pexels-photo-4452517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 6",
     price: 6.99,
-    destacado: false,
-    categoria: "zapatos",
+    category: "zapatos",
   },
   {
     id: 6,
@@ -59,8 +53,7 @@ const products = [
     img: "https://images.pexels.com/photos/3728826/pexels-photo-3728826.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 7",
     price: 7.99,
-    destacado: true,
-    categoria: "remeras",
+    category: "remeras",
   },
   {
     id: 7,
@@ -68,8 +61,7 @@ const products = [
     img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 8",
     price: 8.99,
-    destacado: false,
-    categoria: "zapatos",
+    category: "zapatos",
   },
   {
     id: 8,
@@ -77,8 +69,7 @@ const products = [
     img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 9",
     price: 9.99,
-    destacado: true,
-    categoria: "zapatos",
+    category: "zapatos",
   },
   {
     id: 9,
@@ -86,8 +77,7 @@ const products = [
     img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 10",
     price: 10.99,
-    destacado: true,
-    categoria: "zapatos",
+    category: "zapatos",
   },
   {
     id: 10,
@@ -95,8 +85,7 @@ const products = [
     img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 11",
     price: 11.99,
-    destacado: false,
-    categoria: "zapatos",
+    category: "zapatos",
   },
   {
     id: 11,
@@ -104,8 +93,7 @@ const products = [
     img: "https://images.pexels.com/photos/1461048/pexels-photo-1461048.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 12",
     price: 12.99,
-    destacado: true,
-    categoria: "zapatos",
+    category: "zapatos",
   },
   {
     id: 12,
@@ -113,8 +101,7 @@ const products = [
     img: "https://images.pexels.com/photos/5693889/pexels-photo-5693889.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     description: "Description 13",
     price: 13.99,
-    destacado: false,
-    categoria: "vestidos",
+    category: "vestidos",
   },
   {
     id: 13,
@@ -122,8 +109,7 @@ const products = [
     img: "https://images.pexels.com/photos/11039284/pexels-photo-11039284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=1260",
     description: "Description 14",
     price: 14.99,
-    destacado: true,
-    categoria: "vestidos",
+    category: "vestidos",
   },
   {
     id: 14,
@@ -131,8 +117,7 @@ const products = [
     img: "https://images.pexels.com/photos/6254565/pexels-photo-6254565.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 15",
     price: 15.99,
-    destacado: false,
-    categoria: "remeras",
+    category: "remeras",
   },
   {
     id: 15,
@@ -140,15 +125,53 @@ const products = [
     img: "https://images.pexels.com/photos/7622455/pexels-photo-7622455.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 16",
     price: 16.99,
-    destacado: true,
-    categoria: "vestidos",
+    category: "vestidos",
   },
 ];
 
+// filter
+
+const CATEGORIAS = [
+  {
+    id: "todos",
+    description: "todos",
+  },
+  {
+    id: "remeras",
+    description: "remeras",
+  },
+  {
+    id: "vestidos",
+    description: "vestidos",
+  },
+  {
+    id: "zapatos",
+    description: "zapatos",
+  },
+];
+
+// Return categories list
+export const getCategorias = () => {
+  return CATEGORIAS;
+};
+
+// Return products list
 export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products);
     }, 2000);
+  });
+};
+
+// Return product by category
+export const getProductsByCategory = (categoryId) => {
+  return new Promise((resolve) => {
+    const productsToResolve = products.filter(
+      (item) => item.category === categoryId
+    );
+
+      resolve(productsToResolve);
+
   });
 };

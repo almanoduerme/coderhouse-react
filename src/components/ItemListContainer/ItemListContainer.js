@@ -1,63 +1,74 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../Api";
+import { getProducts, getProductsByCategory, getCategorias } from "../Api";
 import ItemList from "../ItemList/ItemList";
 import { NavLink, useParams } from "react-router-dom";
 import "./ItemListContainer.css";
 
+// console.log(getProductsByCategory);
+
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [category, setCategory] = useState(false);
 
-  const { categoryId, typeId } = useParams();
+  const { categoryId } = useParams();
+
+  // useEffect(() => {
+  //   if (categoryId) {
+  //     getProductsByCategory(categoryId).then((products) => {
+  //       setProducts(products);
+  //       setLoading(false);
+  //       setCategorias(categorias);
+  //     });
+  //   } else {
+  //     getProducts().then((products) => {
+  //       setProducts(products);
+  //       setLoading(false);
+  //       setCategorias(categorias);
+  //     });
+  //   }
+  // }, [categoryId, categorias]);
 
   useEffect(() => {
-    getProducts().then((products) => {
-      let filteredProducts = products;
-      if (categoryId) {
-        if (typeId) {
-          filteredProducts = products.filter((item) => {
-            return item[`${categoryId}`] === typeId;
-          });
-        } else {
-          filteredProducts = products.filter((item) => {
-            return item.destacado;
-          });
-        }
-      }
-      setProducts(filteredProducts);
+    if (categoryId) {
       setLoading(false);
-      setCategory(true);
-    });
-  }, [categoryId, typeId]);
+
+      setTimeout(() => {
+        getProductsByCategory(categoryId).then((products) => {
+          setProducts(products);
+          console.log("IF");
+        });
+      }, 2000);
+    } else {
+      setLoading(false);
+      getProducts().then((products) => {
+        setProducts(products);
+        console.log("ELSE");
+      });
+    }
+  }, [categoryId]);
 
   return (
     <>
-      {category && (
-        <div className="category">
-          <div className="nav-link">
-            <NavLink className="navLink" to="/products">
-              All the Products
-            </NavLink>
-            <NavLink className="navLink" to="/products/destacado">
-              Featured Products
-            </NavLink>
-            <NavLink className="navLink" to="/products/categoria/remeras">
-              T-Shirts
-            </NavLink>
-            <NavLink className="navLink" to="/products/categoria/vestidos">
-              Dresses
-            </NavLink>
-            <NavLink className="navLink" to="/products/categoria/zapatos">
-              Shoes
-            </NavLink>
+      {loading ? (
+        <h1>loading....</h1>
+      ) : (
+        <div className="item-list-container">
+          <div className="item-list-container__header">
+            <div className="nav-link">
+              {getCategorias().map((category) => (
+                <NavLink
+                  key={category.id}
+                  to={`/products/${category.id}`}
+                  className="nav-link__item"
+                >
+                  {category.description}
+                </NavLink>
+              ))}
+            </div>
           </div>
+          <ItemList products={products} />
         </div>
       )}
-      <div className="itemListContainer">
-        <ItemList products={products} />
-        {loading && <p>Loading products...</p>}
-      </div>
     </>
   );
 };
