@@ -125,7 +125,7 @@ const products = [
     img: "https://images.pexels.com/photos/7622455/pexels-photo-7622455.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Description 16",
     price: 16.99,
-    category: "vestidos",
+    category: "vestidos", 
   },
 ];
 
@@ -133,7 +133,7 @@ const products = [
 
 const CATEGORIAS = [
   {
-    id: "todos",
+    id: '',
     description: "todos",
   },
   {

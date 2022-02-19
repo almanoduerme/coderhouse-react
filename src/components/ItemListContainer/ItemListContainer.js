@@ -30,19 +30,16 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     if (categoryId) {
-      setLoading(false);
-
+      // setLoading(false);
       setTimeout(() => {
         getProductsByCategory(categoryId).then((products) => {
           setProducts(products);
-          console.log("IF");
         });
       }, 2000);
     } else {
       setLoading(false);
       getProducts().then((products) => {
         setProducts(products);
-        console.log("ELSE");
       });
     }
   }, [categoryId]);
