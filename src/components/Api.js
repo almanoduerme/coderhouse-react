@@ -171,7 +171,6 @@ export const getProductsByCategory = (categoryId) => {
       (item) => item.category === categoryId
     );
 
-      resolve(productsToResolve);
-
+    resolve(productsToResolve);
   });
 };
