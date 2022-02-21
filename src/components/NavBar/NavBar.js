@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { GoThreeBars, GoX } from "react-icons/go";
 import NavBarMobile from "./NavBarMobile";
 import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +23,8 @@ const NavBar = () => {
   return (
     <>
       <header className="header">
-        <NavLink to="/">
-          <div className="header-logo">
-            <img className="logo" src="./img/logo2.png" alt="logo" />
-            <span> TRUSTINESS STORE</span>
-          </div>
+        <NavLink to="/" className="logo-container">
+          <span className="logo">NOSOTRAS INDUMENTARIA</span>
         </NavLink>
 
         {isOpen ? (

@@ -34,12 +34,15 @@ const ItemListContainer = () => {
         <div className="itemListContainer">
           <div className="category">
             {getCategorias().map((category) => (
-              <NavLink key={category.id} to={`/products/${category.id}`} className='nav-link'>
+              <NavLink
+                key={category.id}
+                to={`/products/${category.id}`}
+                className="nav-link"
+              >
                 {category.description}
               </NavLink>
             ))}
           </div>
-
           <ItemList products={products} />
         </div>
       )}

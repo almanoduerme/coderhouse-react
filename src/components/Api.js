@@ -131,7 +131,7 @@ const products = [
 
 // filter
 
-const CATEGORIAS = [
+const categorias = [
   {
     id: "",
     description: "Todos",
@@ -152,12 +152,13 @@ const CATEGORIAS = [
 
 // Return categories list
 export const getCategorias = () => {
-  return CATEGORIAS;
+  return categorias;
 };
+
 
 // Return products list
 export const getProducts = () => {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(products);
     }, 2000);
