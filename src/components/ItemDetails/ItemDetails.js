@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ItemDetails.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
-const ItemDetails = ({ product }) => {
-  const onAdd = (count) => {
-    console.log(`Se agregaron ${count} "${product.name}" al carrito!`);
+const ItemDetails = ({ product, quantity }) => {
+  const [counter, setCounter] = useState(quantity);
+
+  const onAdd = (quantity) => {
+    console.log(`Se agregaron ${quantity} "${product.name}" al carrito!`);
+    setCounter(quantity);
   };
 
   return (
@@ -16,11 +19,13 @@ const ItemDetails = ({ product }) => {
       <p>{product.description}</p>
       <p>{product.price}</p>
 
-      <ItemCount stock={5} initial={1} onAdd={onAdd} />
-
-      <Link to="/products">
-        <Button margin=".6rem 0 0 0" name="Go back!" />
-      </Link>
+      {counter ? (
+        <Link to="/cart">
+          <Button name="Checkout" />
+        </Link>
+      ) : (
+        <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+      )}
     </div>
   );
 };
