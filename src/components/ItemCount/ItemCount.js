@@ -17,6 +17,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
   };
 
+
+    
+
+
   return (
     <div className="itemCount">
       <div className="itemCountButtons">
@@ -24,7 +28,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <p className="counter">{count}</p>
         <Button widthButton="45%" name="+" handleClick={increment} />
       </div>
-      <Button margin=".5rem 0 0 0" widthButton="100%" name="Add to cart" handleClick={() => onAdd(count)} />
+
+      {count === 0 ? ( 
+        <Button margin=".5rem 0 0 0" widthButton="100%" name="No hay stock"  />
+      ) : (
+        <Button margin=".5rem 0 0 0" widthButton="100%" name="Agregar al carrito" handleClick={() => onAdd(count)} />
+      )}
     </div>
   );
 };
