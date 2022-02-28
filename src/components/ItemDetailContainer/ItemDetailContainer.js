@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     getProducts().then((products) => {
-      setProduct(products[id]);
+      setProduct(products[parseInt(id)]);
       setLoading(false);
       setShowDetails(true);
     });

@@ -6,7 +6,7 @@ const products = [
     description: "Description 1",
     price: 1.99,
     category: "remeras",
-    stock: 6
+    stock: 6,
   },
   {
     id: 1,
@@ -15,7 +15,7 @@ const products = [
     description: "Description 2",
     price: 2.99,
     category: "zapatos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const products = [
     description: "Description 3",
     price: 3.99,
     category: "remeras",
-    stock: 6
+    stock: 6,
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const products = [
     description: "Description 4",
     price: 4.99,
     category: "remeras",
-    stock: 6
+    stock: 6,
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const products = [
     description: "Description 5",
     price: 5.99,
     category: "zapatos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const products = [
     description: "Description 6",
     price: 6.99,
     category: "zapatos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const products = [
     description: "Description 7",
     price: 7.99,
     category: "remeras",
-    stock: 6
+    stock: 6,
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ const products = [
     description: "Description 8",
     price: 8.99,
     category: "zapatos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 8,
@@ -78,7 +78,7 @@ const products = [
     description: "Description 9",
     price: 9.99,
     category: "zapatos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const products = [
     description: "Description 10",
     price: 10.99,
     category: "zapatos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 10,
@@ -96,7 +96,7 @@ const products = [
     description: "Description 11",
     price: 11.99,
     category: "zapatos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 11,
@@ -105,7 +105,7 @@ const products = [
     description: "Description 12",
     price: 12.99,
     category: "zapatos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 12,
@@ -114,7 +114,7 @@ const products = [
     description: "Description 13",
     price: 13.99,
     category: "vestidos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 13,
@@ -123,7 +123,7 @@ const products = [
     description: "Description 14",
     price: 14.99,
     category: "vestidos",
-    stock: 6
+    stock: 6,
   },
   {
     id: 14,
@@ -132,7 +132,7 @@ const products = [
     description: "Description 15",
     price: 15.99,
     category: "remeras",
-    stock: 6
+    stock: 6,
   },
   {
     id: 15,
@@ -141,7 +141,7 @@ const products = [
     description: "Description 16",
     price: 16.99,
     category: "vestidos",
-    stock: 6
+    stock: 6,
   },
 ];
 
@@ -170,7 +170,6 @@ const categorias = [
 export const getCategorias = () => {
   return categorias;
 };
-
 
 // Return products list
 export const getProducts = () => {
