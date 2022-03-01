@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
 import "./NavBarMobile.css";
+import CartContext from "../../context/CartContext";
 
 const NavBarMobile = () => {
   // Menu de Links
@@ -11,6 +12,8 @@ const NavBarMobile = () => {
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
+
+  const { cart } = useContext(CartContext);
 
   return (
     <nav className="aside">
@@ -23,9 +26,14 @@ const NavBarMobile = () => {
           </li>
         ))}
         <li>
-          <NavLink to="/cart" className="link">
+          {/* <NavLink to="/cart" className="link">
             <CartWidget />
-          </NavLink>
+          </NavLink> */}
+          {cart.length > 0 && (
+            <NavLink to="/cart" className="link">
+              <CartWidget />
+            </NavLink>
+          )}
         </li>
       </ul>
     </nav>

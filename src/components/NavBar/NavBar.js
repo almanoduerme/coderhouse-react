@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import { GoThreeBars, GoX } from "react-icons/go";
 import NavBarMobile from "./NavBarMobile";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
+import CartContext from "../../context/CartContext";
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { cart } = useContext(CartContext);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -43,9 +47,11 @@ const NavBar = () => {
               </li>
             ))}
             <li>
-              <NavLink to="/cart" className="link">
-                <CartWidget />
-              </NavLink>
+              {cart.length > 0 && (
+                <NavLink to="/cart" className="link">
+                  <CartWidget />
+                </NavLink>
+              )}
             </li>
           </ul>
         </nav>
