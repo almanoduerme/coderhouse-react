@@ -31,13 +31,25 @@ export function CartContext({ children }) {
     }
   };
 
-  const removeItem = (itemId) => {
-    const newArray = cart.filter((purchase) => purchase.item.id !== itemId);
-    setCart([...newArray]);
+  const removeItem = (item) => {
+    let newCart = cart.filter((p) => p.item.id !== item.item.id);
+    setCart(newCart);
   };
 
   const clear = () => {
     setCart([]);
+  };
+
+  const quantityTotal = () => {
+    return cart.reduce((acc, purchase) => {
+      return acc + purchase.quantity;
+    }, 0);
+  };
+
+  const getTotalPrice = () => {
+    return cart.reduce((acc, purchase) => {
+      return acc + purchase.item.price * purchase.quantity;
+    }, 0);
   };
 
   return (
@@ -47,6 +59,8 @@ export function CartContext({ children }) {
         addItem,
         removeItem,
         clear,
+        getTotalPrice,
+        quantityTotal,
       }}
     >
       {children}

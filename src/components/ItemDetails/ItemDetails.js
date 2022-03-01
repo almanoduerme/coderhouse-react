@@ -9,8 +9,7 @@ import CartContext from "../../context/CartContext";
 
 // Component
 const ItemDetails = ({ product, quantity }) => {
-  const { addItem } =
-    useContext(CartContext);
+  const { addItem } = useContext(CartContext);
   const [counter, setCounter] = useState(quantity);
 
   const onAdd = (quantity) => {
@@ -28,7 +27,7 @@ const ItemDetails = ({ product, quantity }) => {
 
       {counter ? (
         <Link to="/cart">
-          <Button name="Checkout" />
+          <Button name="Finalizar mi compra" />
         </Link>
       ) : (
         <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />

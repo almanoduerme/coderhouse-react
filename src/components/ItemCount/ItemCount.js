@@ -26,7 +26,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       </div>
 
       {count === 0 ? (
-        <Button margin=".5rem 0 0 0" widthButton="100%" name="No hay stock" />
+        <Button margin=".5rem 0 0 0" widthButton="100%" name="Cantidad inválida" />
       ) : (
         <Button
           margin=".5rem 0 0 0"
