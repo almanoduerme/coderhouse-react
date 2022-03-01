@@ -4,12 +4,12 @@ import CartContext from "../../context/CartContext";
 import React, { useContext } from "react";
 
 const CartWidget = () => {
-  const { quantityTotal } = useContext(CartContext);
+  const { getQuantityTotal } = useContext(CartContext);
 
   return (
     <div className="cartWidget">
       <GrCart />
-      <span>{quantityTotal()}</span>
+      <span>{getQuantityTotal()}</span>
     </div>
   );
 };

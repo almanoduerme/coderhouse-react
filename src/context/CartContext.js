@@ -40,7 +40,7 @@ export function CartContext({ children }) {
     setCart([]);
   };
 
-  const quantityTotal = () => {
+  const getQuantityTotal = () => {
     return cart.reduce((acc, purchase) => {
       return acc + purchase.quantity;
     }, 0);
@@ -60,7 +60,7 @@ export function CartContext({ children }) {
         removeItem,
         clear,
         getTotalPrice,
-        quantityTotal,
+        getQuantityTotal,
       }}
     >
       {children}
