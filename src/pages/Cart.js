@@ -27,7 +27,7 @@ export default function Cart() {
           ))
         )}
       </ul>
-      
+ 
       {cart.length > 0 && <p>Total: {getTotalPrice()}</p>}
     </div>
   );
