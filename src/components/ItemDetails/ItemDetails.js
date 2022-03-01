@@ -15,7 +15,6 @@ const ItemDetails = ({ product, quantity }) => {
   const onAdd = (quantity) => {
     setCounter(quantity);
     addItem(product, quantity);
-    console.log(product);
   };
 
   return (
