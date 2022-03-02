@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a18a5d;
+  background-color: #bf8fc7;
 }
 
 .header .logo-container {
@@ -33,7 +33,7 @@
 }
 
 .header .link:hover {
-  color: #efce8b;
+  color: white;
 }
 
 .bars {

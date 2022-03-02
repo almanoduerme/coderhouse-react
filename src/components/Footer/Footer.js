@@ -10,10 +10,10 @@ const Footer = () => {
     <footer className="footer">
       <p>Copyright {year} &copy; - Nahuel Gómez</p>
       <div className="footer__social">
-        <SiLinkedin className="icon" />
-        <SiGithub className="icon" />
-
-        {/* Create link social link */}
+        <a href="https://www.linkedin.com/in/gomeznahuel/" target="blank">
+        <SiLinkedin className="icon" /> </a>
+        <a href="https://www.github.com/almanoduerme" target="blank"> 
+        <SiGithub className="icon" /> </a>
       </div>
     </footer>
   );

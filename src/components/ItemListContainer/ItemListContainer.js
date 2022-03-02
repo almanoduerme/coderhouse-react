@@ -4,6 +4,9 @@ import ItemList from "../ItemList/ItemList";
 import { NavLink, useParams } from "react-router-dom";
 import "./ItemListContainer.css";
 
+// Import React Spinner
+import SyncLoader from "react-spinners/SyncLoader";
+
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -29,7 +32,11 @@ const ItemListContainer = () => {
   return (
     <>
       {loading ? (
-        <h1>loading....</h1>
+        // <h1 className="loading">loading....</h1>
+        <h1 className="loading">
+          {" "}
+          <SyncLoader color="#E569FB" loading={loading} size={50} />
+        </h1>
       ) : (
         <div className="itemListContainer">
           <div className="category">

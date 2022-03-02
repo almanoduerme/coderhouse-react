@@ -1,0 +1,28 @@
+.Cart {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cart-ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.Cart .cart-ul li .img {
+  max-width: 6%;
+}
+
+.getTotalPrice {
+  text-align: center;
+}

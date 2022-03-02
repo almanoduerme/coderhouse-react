@@ -2,14 +2,15 @@ import CartContext from "../context/CartContext";
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../components/Button/Button";
+import "./stylesheet/Cart.css";
 
 export default function Cart() {
   const { cart, removeItem, getTotalPrice } = useContext(CartContext);
 
   return (
-    <div>
+    <div className="Cart">
       <h1>Cart</h1>
-      <ul>
+      <ul className="cart-ul">
         {cart.length <= 0 ? (
           <>
             <p>No items in cart</p>
@@ -20,15 +21,16 @@ export default function Cart() {
         ) : (
           cart.map((item) => (
             <li key={item.item.id}>
+              <img className="img" src={item.item.img} alt={item.item.name} />
               <p>{item.item.name}</p>
+              <p>{item.quantity}</p>
               <p>{item.item.price}</p>
               <button onClick={() => removeItem(item)}>Remove</button>
             </li>
           ))
         )}
       </ul>
- 
-      {cart.length > 0 && <p>Total: {getTotalPrice()}</p>}
+      {cart.length > 0 && <p className="getTotalPrice">Total price: {getTotalPrice()}</p>}
     </div>
   );
 }
