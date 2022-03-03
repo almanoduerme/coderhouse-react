@@ -16,29 +16,36 @@ import Cart from "./pages/Cart";
 import Error404 from "./pages/Error404";
 import Footer from "./components/Footer/Footer";
 
+// Notification Services Context
+import { NotificationServicesProvider } from "./services/notification/NotificationServices";
+
 // Context
 export const MyContext = React.createContext();
 
 function App() {
   return (
-    <CartContext>
-      <BrowserRouter>
-        <NavBar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products/" element={<ItemListContainer />} />
-            <Route path="/products/:categoryId" element={<ItemListContainer />} />
-            <Route path="/item/:id" element={<ItemDetailContainer />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="cart" element={<Cart />} />
-            <Route path="*" element={<Error404 />} />
-          </Routes>
-        </main>
-        <Footer />
-      </BrowserRouter>
-    </CartContext>
+    <>
+    <NotificationServicesProvider>
+      <CartContext>
+        <BrowserRouter>
+          <NavBar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products/" element={<ItemListContainer />} />
+              <Route path="/products/:categoryId" element={<ItemListContainer />} />
+              <Route path="/item/:id" element={<ItemDetailContainer />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="cart" element={<Cart />} />
+              <Route path="*" element={<Error404 />} />
+            </Routes>
+          </main>
+          <Footer />
+        </BrowserRouter>
+      </CartContext>
+      </NotificationServicesProvider>
+    </>
   );
 }
 

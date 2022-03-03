@@ -5,7 +5,15 @@ import Button from "../components/Button/Button";
 import "./stylesheet/Cart.css";
 
 export default function Cart() {
-  const { cart, removeItem, getTotalPrice } = useContext(CartContext);
+  const { cart, removeItem, getTotalPrice, removeQuantity } =
+    useContext(CartContext);
+
+    if(cart.length <= 1) {
+      console.log("No hay nada en el carrito");
+    } else {
+      console.log("Hay algo en el carrito");
+    }
+
 
   return (
     <div className="Cart">
@@ -25,12 +33,17 @@ export default function Cart() {
               <p>{item.item.name}</p>
               <p>{item.quantity}</p>
               <p>{item.item.price}</p>
+              <button onClick={() => removeQuantity(item)}>
+                Remove Quantity
+              </button>
               <button onClick={() => removeItem(item)}>Remove</button>
             </li>
           ))
         )}
       </ul>
-      {cart.length > 0 && <p className="getTotalPrice">Total price: {getTotalPrice()}</p>}
+      {cart.length > 0 && (
+        <p className="getTotalPrice">Total price: {getTotalPrice()}</p>
+      )}
     </div>
   );
 }

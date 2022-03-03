@@ -6,15 +6,19 @@ import Button from "../Button/Button";
 
 // import CartContext
 import CartContext from "../../context/CartContext";
+import { useNotificationServices } from "../../services/notification/NotificationServices";
 
 // Component
 const ItemDetails = ({ product, quantity }) => {
   const { addItem } = useContext(CartContext);
+  const setNotification = useNotificationServices();
+
   const [counter, setCounter] = useState(quantity);
 
   const onAdd = (quantity) => {
     setCounter(quantity);
     addItem(product, quantity);
+    setNotification("success", `Se agregó ${product.name} al carrito `);
   };
 
   return (

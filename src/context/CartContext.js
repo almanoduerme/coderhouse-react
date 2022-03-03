@@ -52,6 +52,23 @@ export function CartContext({ children }) {
     }, 0);
   };
 
+  const removeQuantity = (item) => {
+    let newCart = cart.map((purchase) => {
+  
+      if (purchase.item.id === item.item.id) {
+        if (purchase.quantity > 1) {
+          purchase.quantity -= 1;
+        } else {
+          removeItem(item);
+        }
+      }
+
+      return purchase;
+    });
+    setCart(newCart);
+  };
+
+
   return (
     <Context.Provider
       value={{
@@ -61,6 +78,7 @@ export function CartContext({ children }) {
         clear,
         getTotalPrice,
         getQuantityTotal,
+        removeQuantity,
       }}
     >
       {children}

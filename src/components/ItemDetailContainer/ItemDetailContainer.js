@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProducts } from "../Api";
 import ItemDetails from "../ItemDetails/ItemDetails";
 import "./ItemDetailContainer.css";
+
+import { getDoc, doc } from "firebase/firestore";
+import { firestoreDb } from "../../services/firebase/firebase";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
@@ -12,11 +14,16 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    getProducts().then((products) => {
-      setProduct(products[parseInt(id)]);
-      setLoading(false);
-      setShowDetails(true);
-    });
+    setLoading(true);
+    getDoc(doc(firestoreDb, `products/${id}`))
+      .then((response) => {
+        const product = { id: response.id, ...response.data() };
+        setProduct(product);
+      })
+      .finally(() => {
+        setLoading(false);
+        setShowDetails(true);
+      });
   }, [id]);
 
   return (
