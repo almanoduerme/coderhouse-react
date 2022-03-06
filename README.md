@@ -18,3 +18,4 @@ Consiste en un ecommerce implementado con React.js junto a React Router y React 
 - [Create React App](https://create-react-app.dev/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [React-Router](https://reactrouter.com/docs/en/v6/)
+- [Firebase Google](https://firebase.google.com/?hl=es)
