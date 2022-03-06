@@ -40,6 +40,17 @@ export function CartContext({ children }) {
     setCart([]);
   };
 
+  const removeQuantity = (item) => {
+    let newCart = cart.map((p) => {
+      if (p.item.id === item.item.id) {
+        p.quantity -= 1;
+        return p;
+      }
+      return p;
+    });
+    setCart(newCart);
+  };
+
   const getQuantityTotal = () => {
     return cart.reduce((acc, purchase) => {
       return acc + purchase.quantity;
@@ -61,6 +72,7 @@ export function CartContext({ children }) {
         clear,
         getTotalPrice,
         getQuantityTotal,
+        removeQuantity,
       }}
     >
       {children}

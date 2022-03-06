@@ -3,7 +3,7 @@ import ItemList from "../ItemList/ItemList";
 import { NavLink, useParams } from "react-router-dom";
 import "./ItemListContainer.css";
 
-// firebase
+// Firebase
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { firestoreDb } from "../../services/firebase/firebase";
 
@@ -65,12 +65,11 @@ const ItemListContainer = () => {
       ) : (
         <div className="itemListContainer">
           <div className="category">
-             {categories.map((category) => (
+            {categories.map((category) => (
               <NavLink
                 key={category.id}
                 to={`/products/${category.description}`}
-                className="nav-link"
-              >
+                className="nav-link">
                 {category.description}
               </NavLink>
             ))}

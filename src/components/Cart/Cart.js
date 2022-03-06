@@ -1,11 +1,12 @@
-import CartContext from "../context/CartContext";
+import CartContext from "../../context/CartContext";
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import Button from "../components/Button/Button";
-import "./stylesheet/Cart.css";
+import Button from "../Button/Button";
+import "./Cart.css";
 
 export default function Cart() {
-  const { cart, removeItem, getTotalPrice } = useContext(CartContext);
+  const { cart, removeItem, getTotalPrice, removeQuantity } =
+    useContext(CartContext);
 
   return (
     <div className="Cart">
@@ -26,6 +27,9 @@ export default function Cart() {
               <p>{item.item.album}</p>
               <p>{item.quantity}</p>
               <p>{item.item.price} USD</p>
+              <button onClick={() => removeQuantity(item)}>
+                Remove Quantity
+              </button>
               <button onClick={() => removeItem(item)}>Remove</button>
             </li>
           ))

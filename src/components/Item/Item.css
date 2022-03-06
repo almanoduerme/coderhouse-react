@@ -1,5 +1,6 @@
 .card {
   border: 1px solid #ccc;
+  text-align: center;
 }
 
 .card .card-content {

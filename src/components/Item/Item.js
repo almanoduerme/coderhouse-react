@@ -11,7 +11,7 @@ export default function Item({ product }) {
       <div className="card-content">
         <p>{product.album}</p>
         <p>{product.year}</p>
-        <p>${product.price}</p>
+        <p>{product.price} USD</p>
 
         <Link to={`/item/${product.id}`}>
           <Button name="Ver más"></Button>
