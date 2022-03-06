@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetails from "../ItemDetails/ItemDetails";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 
 import { getDoc, doc } from "firebase/firestore";
@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div className="itemDetailContainer">
-      {showDetails && <ItemDetails product={product} />}
+      {showDetails && <ItemDetail product={product} />}
       {loading && <p>Loading...</p>}
     </div>
   );

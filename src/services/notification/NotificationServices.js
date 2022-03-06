@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 
-const Notification = ({ message = "Prueba", severity }) => {
+const Notification = ({ message = "Test", severity }) => {
   // Styles
   const notificationStyles = {
     position: "absolute",
@@ -15,12 +15,12 @@ const Notification = ({ message = "Prueba", severity }) => {
     padding: "0.6rem 1.2rem",
     borderRadius: "0.5rem",
   };
-  
+
   if (message === "") {
     return null;
   }
 
-  return <div style={notificationStyles} >{message}</div>;
+  return <div style={notificationStyles}>{message}</div>;
 };
 
 const NotificationContext = createContext();

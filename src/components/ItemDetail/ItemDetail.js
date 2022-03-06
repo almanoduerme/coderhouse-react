@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "./ItemDetails.css";
+import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
@@ -9,7 +9,7 @@ import CartContext from "../../context/CartContext";
 import { useNotificationServices } from "../../services/notification/NotificationServices";
 
 // Component
-const ItemDetails = ({ product, quantity }) => {
+const ItemDetail = ({ product, quantity }) => {
   const { addItem } = useContext(CartContext);
   const setNotification = useNotificationServices();
 
@@ -18,15 +18,16 @@ const ItemDetails = ({ product, quantity }) => {
   const onAdd = (quantity) => {
     setCounter(quantity);
     addItem(product, quantity);
-    setNotification("success", `Se agregó ${product.name} al carrito `);
+    setNotification("success", `Se agregó "${product.album}" al carrito `);
   };
 
   return (
-    <div className="itemDetails">
-      <h1>{product.name}</h1>
+    <div className="itemDetail">
       <img src={product.img} alt={product.name} />
-      <p>{product.description}</p>
-      <p>{product.price}</p>
+      <h1>{product.artist}</h1>
+      <p>{product.album}</p>
+      <p>{product.year}</p>
+      <p>${product.price}</p>
 
       {counter ? (
         <Link to="/cart">
@@ -39,4 +40,4 @@ const ItemDetails = ({ product, quantity }) => {
   );
 };
 
-export default ItemDetails;
+export default ItemDetail;

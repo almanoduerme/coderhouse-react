@@ -28,7 +28,7 @@ const NavBar = () => {
     <>
       <header className="header">
         <NavLink to="/" className="logo-container">
-          <span className="logo">NOSOTRAS INDUMENTARIA</span>
+          <span className="logo">ALMA DISCOS</span>
         </NavLink>
 
         {isOpen ? (

@@ -65,7 +65,7 @@ const ItemListContainer = () => {
       ) : (
         <div className="itemListContainer">
           <div className="category">
-            {categories.map((category) => (
+             {categories.map((category) => (
               <NavLink
                 key={category.id}
                 to={`/products/${category.description}`}
