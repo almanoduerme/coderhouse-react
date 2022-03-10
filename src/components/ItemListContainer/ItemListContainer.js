@@ -69,7 +69,8 @@ const ItemListContainer = () => {
               <NavLink
                 key={category.id}
                 to={`/products/${category.description}`}
-                className="nav-link">
+                className="nav-link"
+              >
                 {category.description}
               </NavLink>
             ))}

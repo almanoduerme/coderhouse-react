@@ -6,12 +6,16 @@ import "./ItemDetailContainer.css";
 import { getDoc, doc } from "firebase/firestore";
 import { firestoreDb } from "../../services/firebase/firebase";
 
+import { useNotificationServices } from '../../services/notification/NotificationServices'
+
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
   const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
+
+  const setNotification = useNotificationServices()
 
   useEffect(() => {
     setLoading(true);
@@ -20,11 +24,14 @@ const ItemDetailContainer = () => {
         const product = { id: response.id, ...response.data() };
         setProduct(product);
       })
+      .catch((error) => {
+        setNotification('error',`Error buscando producto: ${error}`)
+      }) 
       .finally(() => {
         setLoading(false);
         setShowDetails(true);
       });
-  }, [id]);
+  }, [id]); // eslint-disable-line
 
   return (
     <div className="itemDetailContainer">

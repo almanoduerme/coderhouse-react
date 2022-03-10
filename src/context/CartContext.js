@@ -32,8 +32,7 @@ export function CartContext({ children }) {
   };
 
   const removeItem = (item) => {
-    let newCart = cart.filter((p) => p.item.id !== item.item.id);
-    setCart(newCart);
+    setCart((prevState) => prevState.filter((p) => p.item.id !== item.id));
   };
 
   const clear = () => {
