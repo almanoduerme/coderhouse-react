@@ -126,7 +126,9 @@ const Cart = () => {
       <div>
         <h1>Cart</h1>
         <h2>Su orden se ha generado exitosamente</h2>
-        <NavLink to="/"><Button name='Volver al inicio' /></NavLink>
+        <NavLink to="/">
+          <Button name="Volver al inicio" />
+        </NavLink>
       </div>
     );
   }

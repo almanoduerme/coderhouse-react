@@ -6,9 +6,7 @@ const Home = () => {
     <>
       <img src="/img/homeBg.png" alt="store" />
       <div className="home">
-        <h1>Store!</h1>
-        <p>Carousel</p>
-        <p>Productos destacados</p>
+        <h2>¡PRODUCTOS DESTACADOS!</h2>
         <p>Envío gratis</p>
         <p>
           Dos imágenes cuadradas mostrando redes sociales y medios de contacto
