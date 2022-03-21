@@ -11,6 +11,8 @@
 Primer entrega del proyecto final para el curso de React.js de [CoderHouse](https://www.coderhouse.com).
 Consiste en un ecommerce implementado con React.js junto a React Router y React Hooks..
 
+![Demo](https://github.com/almanoduerme/coderhouse-react/blob/main/portrait.gif)
+
 ## *Desarrollado con:*
 
 - [Visual Studio Code](https://code.visualstudio.com/)
