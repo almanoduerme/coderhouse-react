@@ -27,6 +27,7 @@ const ItemListContainer = () => {
         )
       : collection(firestoreDb, "products");
 
+      // products
     getDocs(collectionRef)
       .then((response) => {
         const products = response.docs.map((doc) => {
@@ -47,6 +48,7 @@ const ItemListContainer = () => {
     };
   }, [categoryId]);
 
+  // categories
   useEffect(() => {
     getDocs(collection(firestoreDb, "category")).then((response) => {
       const categories = response.docs.map((cat) => {

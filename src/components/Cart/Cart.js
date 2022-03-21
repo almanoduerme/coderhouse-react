@@ -18,6 +18,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../Button/Button";
 
 const Cart = () => {
+  const [codeNumberOrder, setCodeNumberOrder] = useState("");
   const [processingOrder, setProcessingOrder] = useState(false);
   const [orderFinished, setOrderFinished] = useState(false);
   const [contact, setContact] = useState({
@@ -62,6 +63,7 @@ const Cart = () => {
                   `La orden se genero exitosamente, su numero de orden es: ${id}`
                 );
                 setOrderFinished(true);
+                setCodeNumberOrder(id);
               });
             })
             .catch((error) => {
@@ -126,6 +128,10 @@ const Cart = () => {
       <div>
         <h1>Cart</h1>
         <h2>Su orden se ha generado exitosamente</h2>
+        {codeNumberOrder !== "" && (
+          <h3>Su numero de orden es: {codeNumberOrder}</h3>
+        )}
+
         <NavLink to="/">
           <Button name="Volver al inicio" />
         </NavLink>
@@ -157,7 +163,12 @@ const Cart = () => {
             <h4>Comentario: {contact.comment}</h4>
             <button
               onClick={() =>
-                setContact({ phone: "", address: "", comment: "" })
+                setContact({
+                  name: "",
+                  phone: "",
+                  address: "",
+                  comment: "",
+                })
               }
               className="Button"
               style={{ backgroundColor: "#db4025" }}
@@ -166,6 +177,7 @@ const Cart = () => {
             </button>
           </div>
         )}
+
       <Togglable
         buttonLabelShow={
           contact.phone !== "" &&

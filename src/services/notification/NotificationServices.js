@@ -4,8 +4,9 @@ const Notification = ({ message = "Test", severity }) => {
   // Styles
   const notificationStyles = {
     position: "absolute",
-    top: "5px",
-    right: "5px",
+    bottom: "5px",
+    right: "50%",
+    transform: "translateX(50%)",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
