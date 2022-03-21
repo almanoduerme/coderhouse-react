@@ -49,8 +49,8 @@ Consiste en un ecommerce implementado con React.js junto a React Router y React 
 ### *Información acerca del desarrollo:*
 ## *Rutas:*
 
-- Main ("/"): Renderiza imágenes (banners), un container para acceder a las distintas categorías de productos y un container con todos los productos existentes en la base de datos.
-- Category ("/category/:categoryId"): Renderiza productos filtrados en base a su categoría.
-- Item ("/detail/:productId"): Renderiza una card con los detalles de el producto seleccionado (nombre, descripción, imágen, stock). También tiene disponible un botón que es el encargado de agregar el producto al carrito, una vez agregado el producto, se renderiza otro botón que redirecciona al usuario a su carrito de compras.
-- Cart ("/cart"): Renderiza el carrito de compras con los productos agregados por el usuario. Si no se agregó ningún producto renderiza el componente CartEmpty que retorna un aviso de "No hay productos".
+- Main ("/"): Renderiza las imágenes de productos destacados, un container para acceder a las distintas categorías y otro con todos los productos existentes en la base de datos.
+- Category ("/category/:categoryId"): Renderiza los productos filtrados en base a su categoría.
+- Item ("/detail/:productId"): Renderiza una card con los detalles del producto seleccionado (nombre, descripción, imágen, stock). 
+- Cart ("/cart"): Renderiza el carrito de compras con los productos agregados por el usuario.
 - Order ("/order"): Renderiza un formulario para generar una orden en la base de datos, al enviar el formulario si todos los campos están bien renderiza un cartel con el ID de la orden generada.
