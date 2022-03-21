@@ -26,9 +26,6 @@ const NavBarMobile = () => {
           </li>
         ))}
         <li>
-          {/* <NavLink to="/cart" className="link">
-            <CartWidget />
-          </NavLink> */}
           {cart.length > 0 && (
             <NavLink to="/cart" className="link">
               <CartWidget />

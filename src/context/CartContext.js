@@ -25,8 +25,6 @@ export function CartContext({ children }) {
     } else {
       if (quantity > 0) {
         setCart((prevState) => [...prevState, newItem]);
-      } else {
-        console.log("Debés agregar al menos 1 item");
       }
     }
   };
